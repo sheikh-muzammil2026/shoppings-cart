@@ -25,7 +25,7 @@ const quantity = parseInt(quantityEl.value);
 function setToStorage(product, quantity) {
 // get old cart
  let cart = localStorage.getItem("cart");
- 
+ console.log(cart);
   if(cart){
     let cartObj =  JSON.parse(cart);
     cartObj[product] += quantity;
