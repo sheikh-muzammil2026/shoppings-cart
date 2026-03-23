@@ -25,15 +25,19 @@ const quantity = parseInt(quantityEl.value);
 function setToStorage(product, quantity) {
 // get old cart
  let oldCart = localStorage.getItem("cart");
- console.log(oldCart);
+//  console.log(oldCart);
   if(oldCart){
      let cartObj =  JSON.parse(oldCart);
-     console.log(cartObj);
-    if(oldCart[product]){
+    
+    if(cartObj[product]){
       cartObj[product] += quantity;
       let cart = JSON.stringify(cartObj);
       localStorage.setItem("cart", cart);
-    }
+    }else{
+      cartObj[product] = quantity;
+      let cart = JSON.stringify(cartObj);
+      localStorage.setItem("cart", cart);
+    };
    
   }else{
     // set new item
@@ -41,6 +45,6 @@ function setToStorage(product, quantity) {
   cartObj[product] = quantity;
   let newCart = JSON.stringify(cartObj);
   localStorage.setItem("cart", newCart);
-  }
+  };
   
-}
+};
