@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>GitHub Issues Tracker</title>
+
+  
+
+  <!-- tailwind and daisyui cdn link -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+<!-- google font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+    
+<style>
+  *{
+      font-family: "Geist", sans-serif;
+  }
+</style>
+  
+</head>
+
+<body>
+ 
+<section class="login-form  bg-slate-50 py-16">
+  
+  <!-- form container-->
+  <form class="form-container flex items-center justify-center flex-col gap-4 bg-white shadow-sm max-w-md mx-auto py-8 px-6">
+   
+
+    <!-- input field -->
+  <fieldset class="fieldset border-base-300 rounded-box w-full ">
+  
+  <label class="label font-semibold">Product</label>
+  <input id="product" type="text" class="input w-full" placeholder="Enter Product name" />
+
+  <label class="label font-semibold">Quantity</label>
+  <input id="quantity" type="text" class="input w-full" placeholder="Enter Quantity" />
+
+  <button type="button" id="btn-add" class="btn btn-primary mt-4">Add to cart</button>
+</fieldset>
+  <div id="cart-container"></div>
+  </form>
+
+</section>
+<script src="cart.js"></script>
+</body>
+
+</html>
